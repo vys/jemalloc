@@ -30,8 +30,13 @@ pages_map(void *addr, size_t size)
 	 * We don't use MAP_FIXED here, because it can cause the *replacement*
 	 * of existing mappings, and we only want to create new mappings.
 	 */
+#if defined(__linux__)
+	ret = mmap(addr, size, PROT_READ | PROT_WRITE, MAP_HUGETLB | MAP_PRIVATE | MAP_ANON,
+	    -1, 0);
+#else
 	ret = mmap(addr, size, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON,
 	    -1, 0);
+#endif
 	assert(ret != NULL);
 
 	if (ret == MAP_FAILED)
