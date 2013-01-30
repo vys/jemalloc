@@ -1,5 +1,8 @@
 #define	JEMALLOC_CHUNK_MMAP_C_
 #include "jemalloc/internal/jemalloc_internal.h"
+#if defined(__linux__)
+#include <sys/mman.h>
+#endif
 
 /******************************************************************************/
 /* Function prototypes for non-inline static functions. */
