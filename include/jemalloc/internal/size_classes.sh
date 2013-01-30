@@ -11,7 +11,7 @@ lg_tmin=3
 
 # Range of page sizes.
 lg_pmin=12
-lg_pmax=16
+lg_pmax=22
 
 pow2() {
   e=$1

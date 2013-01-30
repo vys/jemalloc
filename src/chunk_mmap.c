@@ -1,7 +1,7 @@
 #define	JEMALLOC_CHUNK_MMAP_C_
 #include "jemalloc/internal/jemalloc_internal.h"
 #if defined(__linux__)
-#include <sys/mman.h>
+#include <linux/mman.h>
 #endif
 
 /******************************************************************************/

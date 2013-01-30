@@ -20,6 +20,11 @@ const uint8_t	small_size2bin[] = {
 #define	S2B_2048(i)	S2B_1024(i) S2B_1024(i)
 #define	S2B_4096(i)	S2B_2048(i) S2B_2048(i)
 #define	S2B_8192(i)	S2B_4096(i) S2B_4096(i)
+#define	S2B_16384(i) S2B_8192(i) S2B_8192(i)
+#define	S2B_32768(i) S2B_16384(i) S2B_16384(i)
+#define	S2B_65536(i) S2B_32768(i) S2B_32768(i)
+#define	S2B_131072(i) S2B_65536(i) S2B_65536(i)
+#define	S2B_262144(i) S2B_131072(i) S2B_131072(i)
 #define	SIZE_CLASS(bin, delta, size)					\
 	S2B_##delta(bin)
 	SIZE_CLASSES

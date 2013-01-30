@@ -936,8 +936,8 @@ AC_CACHE_CHECK([STATIC_PAGE_SHIFT],
     SYSTEM_INFO si;
     GetSystemInfo(&si);
     result = si.dwPageSize;
-#elif defined(__linux__)
-    result = 2097152
+#elif defined(linux) || defined(__linux) || defined(__linux__)
+    result = 2097152;
 #else
     result = sysconf(_SC_PAGESIZE);
 #endif
