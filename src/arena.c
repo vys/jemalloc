@@ -39,6 +39,11 @@ const uint8_t	small_size2bin[] = {
 #undef S2B_2048
 #undef S2B_4096
 #undef S2B_8192
+#undef S2B_16384
+#undef S2B_32768
+#undef S2B_65536
+#undef S2B_131072
+#undef S2B_262144
 #undef SIZE_CLASS
 };
 
